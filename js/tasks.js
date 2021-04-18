@@ -61,3 +61,27 @@ function getDiscount(totalSpent) {
   // Пиши код выше этой строки
   return discount;
 }
+
+// Task 33
+
+function formatMessage(message, maxLength) {
+  let result;
+  // Пиши код ниже этой строки
+  if (message.length <= maxLength) {
+    result = message;
+  } else if (message.length > maxLength) {
+    result = message.slice(0, maxLength) + "...";
+  }
+  // Пиши код выше этой строки
+  return result;
+}
+
+// Task 35
+
+function checkForName(fullName, name) {
+ const result = fullName.includes(name); // Дополни эту строку
+  return result;
+}
+
+// Task 36
+
