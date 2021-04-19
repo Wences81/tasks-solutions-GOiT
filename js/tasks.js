@@ -85,3 +85,18 @@ function checkForName(fullName, name) {
 
 // Task 36
 
+function checkForSpam(message) {
+  let result;
+  // Write your code under this line
+  message = message.toLowerCase();
+  if (message.includes("spam") || message.includes("sale")) {
+    result = true;
+     
+  } else {
+    result = false;
+  }
+  // Write your code above this line
+  return result;
+
+}
+
