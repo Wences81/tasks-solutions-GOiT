@@ -2,12 +2,12 @@
 function checkStorage(available, ordered) {
   let message;
   // Пиши код ниже этой строки
-if (available < ordered){
-  message = 'На складе недостаточно товаров!';
- 
-} else {
-  message =  'Заказ оформлен, с вами свяжется менеджер';
-}  
+  if (available < ordered) {
+    message = 'На складе недостаточно товаров!';
+
+  } else {
+    message = 'Заказ оформлен, с вами свяжется менеджер';
+  }
   // Пиши код выше этой строки
   return message;
 }
@@ -16,13 +16,15 @@ if (available < ordered){
 function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
   let message;
   // Пиши код ниже этой строки
-const totalPrice = pricePerDroid * orderedQuantity;
-  if (totalPrice > customerCredits){
-    message = "Недостаточно средств на счету!"}
-  
+  const totalPrice = pricePerDroid * orderedQuantity;
+  if (totalPrice > customerCredits) {
+    message = "Недостаточно средств на счету!"
+  }
+
   else {
-    message = `Вы купили ${orderedQuantity} дроидов, на счету осталось ${customerCredits - totalPrice} кредитов`};
-                                    
+    message = `Вы купили ${orderedQuantity} дроидов, на счету осталось ${customerCredits - totalPrice} кредитов`
+  };
+
   // Пиши код выше этой строки
   return message;
 }
@@ -32,13 +34,14 @@ const totalPrice = pricePerDroid * orderedQuantity;
 function checkStorage(available, ordered) {
   let message;
   // Пиши код ниже этой строки
-  if(ordered === 0) {
+  if (ordered === 0) {
     message = "В заказе еще нет товаров"
-  } else if(ordered > available) {
+  } else if (ordered > available) {
     message = 'Слишком большой заказ, на складе недостаточно товаров!'
   } else {
-    message = 'Заказ оформлен, с вами свяжется менеджер'}
-         
+    message = 'Заказ оформлен, с вами свяжется менеджер'
+  }
+
 
   // Пиши код выше этой строки
   return message;
@@ -53,10 +56,10 @@ function getDiscount(totalSpent) {
   const GOLD_DISCOUNT = 0.1;
   let discount;
   // Пиши код ниже этой строки
-  if (totalSpent >= 50000) {discount = GOLD_DISCOUNT};
-  if (totalSpent >= 20000 && totalSpent < 50000) {discount = SILVER_DISCOUNT};
-  if (totalSpent >= 5000 && totalSpent < 20000) {discount = BRONZE_DISCOUNT};
-  if (totalSpent < 5000) {discount = BASE_DISCOUNT};
+  if (totalSpent >= 50000) { discount = GOLD_DISCOUNT };
+  if (totalSpent >= 20000 && totalSpent < 50000) { discount = SILVER_DISCOUNT };
+  if (totalSpent >= 5000 && totalSpent < 20000) { discount = BRONZE_DISCOUNT };
+  if (totalSpent < 5000) { discount = BASE_DISCOUNT };
 
   // Пиши код выше этой строки
   return discount;
@@ -79,7 +82,7 @@ function formatMessage(message, maxLength) {
 // Task 35
 
 function checkForName(fullName, name) {
- const result = fullName.includes(name); // Дополни эту строку
+  const result = fullName.includes(name); // Дополни эту строку
   return result;
 }
 
@@ -91,7 +94,7 @@ function checkForSpam(message) {
   message = message.toLowerCase();
   if (message.includes("spam") || message.includes("sale")) {
     result = true;
-     
+
   } else {
     result = false;
   }
@@ -107,11 +110,12 @@ function checkForSpam(message) {
 function checkPassword(password) {
   const ADMIN_PASSWORD = 'jqueryismyjam';
   // Пиши код ниже этой строки
-  
+
 
   if (password === ADMIN_PASSWORD) {
-    return 'Добро пожаловать!';}
- 
+    return 'Добро пожаловать!';
+  }
+
 
   return 'Доступ запрещен, неверный пароль!';
   // Пиши код выше этой строки
@@ -121,16 +125,128 @@ function checkPassword(password) {
 
 function checkStorage(available, ordered) {
   // Пиши код ниже этой строки
-  
+
 
   if (ordered === 0) {
-    return 'В заказе еще нет товаров';}
-  
+    return 'В заказе еще нет товаров';
+  }
+
   if (ordered > available) {
-    return 'Слишком большой заказ, на складе недостаточно товаров!';}
- 
+    return 'Слишком большой заказ, на складе недостаточно товаров!';
+  }
+
 
   return 'Заказ оформлен, с вами свяжется менеджер';
   // Пиши код выше этой строки
 }
 
+
+
+// TASK 9
+
+function getExtremeElements(array) {
+  // Пиши код ниже этой строки
+
+
+  return [(array[0]), array[array.length - 1]];
+
+  // Пиши код выше этой строки
+}
+
+
+
+  // TASK 11
+
+function calculateEngravingPrice(message, pricePerWord) {
+  // Пиши код ниже этой строки
+let totalPrice;
+  
+  totalPrice = message.split(" ").length * pricePerWord;
+  
+
+return totalPrice;
+  // Пиши код выше этой строки
+}
+
+
+// TASK 13
+
+function slugify(title) {
+  // Пиши код ниже этой строки
+ let slug;
+  
+  
+  slug = title.toLowerCase().split(" ").join("-");
+ 
+ 
+ return slug;
+  // Пиши код выше этой строки
+}
+
+
+// TASK 16
+
+function makeArray(firstArray, secondArray, maxLength) {
+    // Пиши код ниже этой строки
+let newArray;
+  
+  newArray = firstArray.concat(secondArray).slice(0, maxLength);
+  
+  return newArray;
+  
+ 
+    // Пиши код выше этой строки
+}
+  
+
+
+// TASK 18
+
+
+function calculateTotal(number) {
+  // Пиши код ниже этой строки
+
+  let total=0;
+  
+  for (let i=0; i<=number; i+=1) {
+    total+=i }
+  
+  
+  return total;
+
+
+  // Пиши код выше этой строки
+}
+
+
+// TASK 20
+
+function calculateTotalPrice(order) {
+  let total = 0;
+  // Пиши код ниже этой строки
+  for (let i = 0; i <= order[i]; i += 1) {
+    
+    total += order[i]}; 
+
+  // Пиши код выше этой строки
+  return total;
+}
+
+
+
+// TASK 21
+
+function findLongestWord(string) {
+  // Пиши код ниже этой строки
+  let longestWord = "";
+  const words = string.split(" ");
+  
+  for ( const word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+      
+  // Пиши код выше этой строки
+}
