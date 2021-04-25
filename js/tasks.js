@@ -250,3 +250,135 @@ function findLongestWord(string) {
       
   // Пиши код выше этой строки
 }
+
+
+// TASK 22
+
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  // Пиши код ниже этой строки
+  for (let i = min; i <= max; i += 1) {
+    numbers.push(i);
+  }
+  // Пиши код выше этой строки
+  return numbers;
+}
+
+
+
+// TASK 23
+
+function filterArray(numbers, value) {
+  // Пиши код ниже этой строки
+
+ let newNumber = [];
+
+for (const number of numbers) {
+  
+  if (number > value) {
+    
+    newNumber.push(number)}
+  
+   }
+  
+  
+  
+  return newNumber;
+  
+  // Пиши код выше этой строки
+}
+
+
+
+// TASK 25
+
+function getCommonElements(array1, array2) {
+  // Пиши код ниже этой строки
+let newArray = [];
+  
+  
+  for (let element of array1) {
+    let secondArray = array2.includes(element);
+    
+    if (secondArray) {
+      newArray.push(element);}
+  }
+    
+ 
+    
+  return newArray;
+  // Пиши код выше этой строки
+}
+
+
+
+// TASK 27
+
+function filterArray(numbers, value) {
+  // Пиши код ниже этой строки
+  const filteredNumbers = [];
+
+  for (let number of numbers) {
+   
+
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  }
+
+  return filteredNumbers;
+  // Пиши код выше этой строки
+}
+
+
+
+// TASK 29
+
+function getEvenNumbers(start, end) {
+    // Пиши код ниже этой строки
+let evenNumbers = [];
+  for (let i = start; i <= end; i+=1) {
+    if (i%2 === 0) {
+      evenNumbers.push(i)}
+  }
+
+ return evenNumbers;   
+    // Пиши код выше этой строки
+}
+  
+
+// TASK 31
+
+function findNumber(start, end, divisor) {
+  // Пиши код ниже этой строки
+  let number;
+
+  for (let i = start; i < end; i += 1) {
+    if (i % divisor === 0) {
+      return i;
+      
+    }
+  }
+
+  return number;
+  // Пиши код выше этой строки
+}
+
+
+// TASK 32
+
+function includes(array, value) {
+  // Пиши код ниже этой строки
+  
+  
+for (let element of array) {
+  
+  if (element === value) {
+    
+  return true;
+  }
+}
+
+  return false;
+  // Пиши код выше этой строки
+}
