@@ -155,16 +155,16 @@ function getExtremeElements(array) {
 
 
 
-  // TASK 11
+// TASK 11
 
 function calculateEngravingPrice(message, pricePerWord) {
   // Пиши код ниже этой строки
-let totalPrice;
-  
-  totalPrice = message.split(" ").length * pricePerWord;
-  
+  let totalPrice;
 
-return totalPrice;
+  totalPrice = message.split(" ").length * pricePerWord;
+
+
+  return totalPrice;
   // Пиши код выше этой строки
 }
 
@@ -173,13 +173,13 @@ return totalPrice;
 
 function slugify(title) {
   // Пиши код ниже этой строки
- let slug;
-  
-  
+  let slug;
+
+
   slug = title.toLowerCase().split(" ").join("-");
- 
- 
- return slug;
+
+
+  return slug;
   // Пиши код выше этой строки
 }
 
@@ -187,17 +187,17 @@ function slugify(title) {
 // TASK 16
 
 function makeArray(firstArray, secondArray, maxLength) {
-    // Пиши код ниже этой строки
-let newArray;
-  
+  // Пиши код ниже этой строки
+  let newArray;
+
   newArray = firstArray.concat(secondArray).slice(0, maxLength);
-  
+
   return newArray;
-  
- 
-    // Пиши код выше этой строки
+
+
+  // Пиши код выше этой строки
 }
-  
+
 
 
 // TASK 18
@@ -206,12 +206,13 @@ let newArray;
 function calculateTotal(number) {
   // Пиши код ниже этой строки
 
-  let total=0;
-  
-  for (let i=0; i<=number; i+=1) {
-    total+=i }
-  
-  
+  let total = 0;
+
+  for (let i = 0; i <= number; i += 1) {
+    total += i
+  }
+
+
   return total;
 
 
@@ -225,8 +226,9 @@ function calculateTotalPrice(order) {
   let total = 0;
   // Пиши код ниже этой строки
   for (let i = 0; i <= order[i]; i += 1) {
-    
-    total += order[i]}; 
+
+    total += order[i]
+  };
 
   // Пиши код выше этой строки
   return total;
@@ -240,14 +242,14 @@ function findLongestWord(string) {
   // Пиши код ниже этой строки
   let longestWord = "";
   const words = string.split(" ");
-  
-  for ( const word of words) {
+
+  for (const word of words) {
     if (word.length > longestWord.length) {
       longestWord = word;
     }
   }
   return longestWord;
-      
+
   // Пиши код выше этой строки
 }
 
@@ -271,20 +273,21 @@ function createArrayOfNumbers(min, max) {
 function filterArray(numbers, value) {
   // Пиши код ниже этой строки
 
- let newNumber = [];
+  let newNumber = [];
 
-for (const number of numbers) {
-  
-  if (number > value) {
-    
-    newNumber.push(number)}
-  
-   }
-  
-  
-  
+  for (const number of numbers) {
+
+    if (number > value) {
+
+      newNumber.push(number)
+    }
+
+  }
+
+
+
   return newNumber;
-  
+
   // Пиши код выше этой строки
 }
 
@@ -294,18 +297,19 @@ for (const number of numbers) {
 
 function getCommonElements(array1, array2) {
   // Пиши код ниже этой строки
-let newArray = [];
-  
-  
+  let newArray = [];
+
+
   for (let element of array1) {
     let secondArray = array2.includes(element);
-    
+
     if (secondArray) {
-      newArray.push(element);}
+      newArray.push(element);
+    }
   }
-    
- 
-    
+
+
+
   return newArray;
   // Пиши код выше этой строки
 }
@@ -319,7 +323,7 @@ function filterArray(numbers, value) {
   const filteredNumbers = [];
 
   for (let number of numbers) {
-   
+
 
     if (number > value) {
       filteredNumbers.push(number);
@@ -335,17 +339,18 @@ function filterArray(numbers, value) {
 // TASK 29
 
 function getEvenNumbers(start, end) {
-    // Пиши код ниже этой строки
-let evenNumbers = [];
-  for (let i = start; i <= end; i+=1) {
-    if (i%2 === 0) {
-      evenNumbers.push(i)}
+  // Пиши код ниже этой строки
+  let evenNumbers = [];
+  for (let i = start; i <= end; i += 1) {
+    if (i % 2 === 0) {
+      evenNumbers.push(i)
+    }
   }
 
- return evenNumbers;   
-    // Пиши код выше этой строки
+  return evenNumbers;
+  // Пиши код выше этой строки
 }
-  
+
 
 // TASK 31
 
@@ -356,7 +361,7 @@ function findNumber(start, end, divisor) {
   for (let i = start; i < end; i += 1) {
     if (i % divisor === 0) {
       return i;
-      
+
     }
   }
 
@@ -369,16 +374,112 @@ function findNumber(start, end, divisor) {
 
 function includes(array, value) {
   // Пиши код ниже этой строки
-  
-  
-for (let element of array) {
-  
-  if (element === value) {
-    
-  return true;
+
+
+  for (let element of array) {
+
+    if (element === value) {
+
+      return true;
+    }
   }
-}
 
   return false;
+  // Пиши код выше этой строки
+}
+
+
+
+
+
+// MODUL 3
+
+// TASK 10
+
+const apartment = {
+  descr: 'Просторная квартира в центре',
+  rating: 4,
+  price: 2153,
+};
+const keys = [];
+const values = [];
+// Пиши код ниже этой строки
+for (const key in apartment) {
+  keys.push(key);
+  values.push(apartment[key]);
+}
+
+
+
+// TASK 11
+
+
+const keys = [];
+const values = [];
+const advert = {
+  service: 'apt',
+};
+const apartment = Object.create(advert);
+apartment.descr = 'Просторная квартира в центре';
+apartment.rating = 4;
+apartment.price = 2153;
+
+for (const key in apartment) {
+  // Пиши код ниже этой строки
+if (apartment.hasOwnProperty(key)) {
+  keys.push(key);
+  values.push(apartment[key]);
+}
+  // Пиши код выше этой строки
+}
+
+
+// TASK 12
+
+function countProps(object) {
+  let propCount = 0;
+  // Пиши код ниже этой строки
+for ( key in object) {
+  if (object.hasOwnProperty(key)) {
+    propCount++;
+  }
+  }
+  // Пиши код выше этой строки
+  return propCount;
+}
+
+
+
+
+// TASK 13
+
+const apartment = {
+  descr: 'Просторная квартира в центре',
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+// Пиши код ниже этой строки
+const keys = Object.keys(apartment);
+for (const key of keys) {
+  
+values.push(apartment[key]);
+}
+
+
+
+
+// TASK 15
+
+function countProps(object) {
+  // Пиши код ниже этой строки
+  let propCount = 0;
+  const keys = Object.keys(object);
+
+  for (const key of keys) {
+    propCount++;
+  }
+
+  return propCount;
   // Пиши код выше этой строки
 }
