@@ -426,10 +426,10 @@ apartment.price = 2153;
 
 for (const key in apartment) {
   // Пиши код ниже этой строки
-if (apartment.hasOwnProperty(key)) {
-  keys.push(key);
-  values.push(apartment[key]);
-}
+  if (apartment.hasOwnProperty(key)) {
+    keys.push(key);
+    values.push(apartment[key]);
+  }
   // Пиши код выше этой строки
 }
 
@@ -439,10 +439,10 @@ if (apartment.hasOwnProperty(key)) {
 function countProps(object) {
   let propCount = 0;
   // Пиши код ниже этой строки
-for ( key in object) {
-  if (object.hasOwnProperty(key)) {
-    propCount++;
-  }
+  for (key in object) {
+    if (object.hasOwnProperty(key)) {
+      propCount++;
+    }
   }
   // Пиши код выше этой строки
   return propCount;
@@ -462,8 +462,8 @@ const values = [];
 // Пиши код ниже этой строки
 const keys = Object.keys(apartment);
 for (const key of keys) {
-  
-values.push(apartment[key]);
+
+  values.push(apartment[key]);
 }
 
 
@@ -482,4 +482,106 @@ function countProps(object) {
 
   return propCount;
   // Пиши код выше этой строки
+}
+
+
+// TASK 15
+
+const apartment = {
+  descr: 'Просторная квартира в центре',
+  rating: 4,
+  price: 2153,
+};
+// Пиши код ниже этой строки
+const keys = Object.keys(apartment);
+const values = Object.values(apartment);
+
+
+
+// TASK 16
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+  // Пиши код ниже этой строки
+const values = Object.values(salaries);
+  
+  for (const value of values) {
+    totalSalary += value;
+  }
+  // Пиши код выше этой строки
+  return totalSalary;
+}
+
+
+
+// TASK 17
+
+const colors = [
+  { hex: '#f44336', rgb: '244,67,54' },
+  { hex: '#2196f3', rgb: '33,150,243' },
+  { hex: '#4caf50', rgb: '76,175,80' },
+  { hex: '#ffeb3b', rgb: '255,235,59' },
+];
+
+const hexColors = [];
+const rgbColors = [];
+// Пиши код ниже этой строки
+for (const color of colors) {
+  
+  hexColors.push(color.hex);
+  rgbColors.push(color.rgb);
+}
+
+
+
+// TASK 18
+
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
+  // Пиши код ниже этой строки
+ 
+  
+  for (const product of products) {
+    
+    if (productName === product.name) {
+        
+       return product.price;
+  }
+  
+  }
+  
+       return null
+  // Пиши код выше этой строки
+}
+
+
+
+// TASK 19
+
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+  // Пиши код ниже этой строки
+  const propValue = [];
+  
+  for (const product of products) {
+    
+    if (product[propName]) {
+      
+      propValue.push(product[propName])
+    }
+  }
+  
+  return propValue;
 }
