@@ -503,8 +503,8 @@ const values = Object.values(apartment);
 function countTotalSalary(salaries) {
   let totalSalary = 0;
   // Пиши код ниже этой строки
-const values = Object.values(salaries);
-  
+  const values = Object.values(salaries);
+
   for (const value of values) {
     totalSalary += value;
   }
@@ -527,7 +527,7 @@ const hexColors = [];
 const rgbColors = [];
 // Пиши код ниже этой строки
 for (const color of colors) {
-  
+
   hexColors.push(color.hex);
   rgbColors.push(color.rgb);
 }
@@ -545,18 +545,18 @@ const products = [
 
 function getProductPrice(productName) {
   // Пиши код ниже этой строки
- 
-  
+
+
   for (const product of products) {
-    
+
     if (productName === product.name) {
-        
-       return product.price;
+
+      return product.price;
+    }
+
   }
-  
-  }
-  
-       return null
+
+  return null
   // Пиши код выше этой строки
 }
 
@@ -574,15 +574,15 @@ const products = [
 function getAllPropValues(propName) {
   // Пиши код ниже этой строки
   const propValue = [];
-  
+
   for (const product of products) {
-    
+
     if (product[propName]) {
-      
+
       propValue.push(product[propName])
     }
   }
-  
+
   return propValue;
 }
 
@@ -601,20 +601,20 @@ const products = [
 
 function calculateTotalPrice(productName) {
   // Пиши код ниже этой строки
- 
- let totalPrice = 0;
-  
-  
-for (const product of products) {
-  
-  if (productName === product.name) {
-    
-   totalPrice = product.price * product.quantity;
-    
-    
+
+  let totalPrice = 0;
+
+
+  for (const product of products) {
+
+    if (productName === product.name) {
+
+      totalPrice = product.price * product.quantity;
+
+
+    }
+
   }
-  
-}
 
   return totalPrice;
   // Пиши код выше этой строки
@@ -677,7 +677,7 @@ const highTemperatures = {
 };
 // Пиши код ниже этой строки
 const {
- yesterday: highYesterday,
+  yesterday: highYesterday,
   today: highToday,
   tomorrow: highTomorrow,
   icon: highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
@@ -706,7 +706,7 @@ const rgbColors = [];
 // Пиши код ниже этой строки
 
 for (const { hex, rgb } of colors) {
-  
+
   hexColors.push(hex);
   rgbColors.push(rgb);
 }
@@ -731,10 +731,10 @@ const forecast = {
 // Пиши код ниже этой строки
 
 const {
-  
+
   today: { low: lowToday, high: highToday, icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg' },
-      
-  tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon =  'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' },
+
+  tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' },
 
 
 } = forecast;
@@ -748,12 +748,12 @@ const {
 // Пиши код ниже этой строки
 function calculateMeanTemperature(forecast) {
 
-const {
-  today: { low: todayLow, high: todayHigh },
-  
-  tomorrow: { low: tomorrowLow, high: tomorrowHigh },
-  
-} = forecast;
+  const {
+    today: { low: todayLow, high: todayHigh },
+
+    tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+
+  } = forecast;
   // Пиши код выше этой строки
   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 }
@@ -803,7 +803,7 @@ const overrideSettings = {
   timePerQuestion: 30,
 };
 // Пиши код ниже этой строки
-const finalSettings = {...defaultSettings, ...overrideSettings};
+const finalSettings = { ...defaultSettings, ...overrideSettings };
 
 
 
@@ -816,8 +816,8 @@ function makeTask(data) {
   const category = 'Общее';
   const priority = 'Обычный';
   // Пиши код ниже этой строки
-const newData = {completed, category, priority, ...data}
-return newData
+  const newData = { completed, category, priority, ...data }
+  return newData
   // Пиши код выше этой строки
 }
 
@@ -829,10 +829,10 @@ return newData
 
 // Пиши код ниже этой строки
 function add(...args) {
-let total = 0;
- for (const arg of args) {
-  total += arg;
- }
+  let total = 0;
+  for (const arg of args) {
+    total += arg;
+  }
   return total;
   // Пиши код выше этой строки
 }
@@ -849,12 +849,12 @@ function addOverNum(firstArgs, ...args) {
   let total = 0;
 
   for (const arg of args) {
-    if (arg > firstArgs) { 
-    total += arg;
-    
+    if (arg > firstArgs) {
+      total += arg;
+
+    }
   }
-  }
- return total
+  return total
   // Пиши код выше этой строки
 }
 
@@ -867,17 +867,17 @@ function addOverNum(firstArgs, ...args) {
 
 function findMatches(array, ...args) {
   const matches = []; // Не изменяй эту строку
-  
-for (const arg of args) {
-  
-  if (array.includes(arg)) {
-    
-    matches.push(arg);
-    
-    
+
+  for (const arg of args) {
+
+    if (array.includes(arg)) {
+
+      matches.push(arg);
+
+
+    }
   }
-}
-  
+
   // Пиши код выше этой строки
   return matches;
 }
@@ -897,11 +897,11 @@ const bookShelf = {
   addBook(bookName) {
     return `Добавляем книгу ${bookName}`;
   },
-  
+
   removeBook(bookName) {
     return `Удаляем книгу ${bookName}`;
   },
-  
+
   updateBook(oldName, newName) {
     return `Обновляем книгу ${oldName} на ${newName}`;
   },
@@ -919,10 +919,10 @@ const bookShelf = {
   books: ['Последнее королевство', 'Мгла', 'Страж снов'],
   updateBook(oldName, newName) {
     // Пиши код ниже этой строки
-	const bookIndex = this.books.indexOf(oldName);
-    this.books.splice(bookIndex, 1 ,newName);
-	
-	
+    const bookIndex = this.books.indexOf(oldName);
+    this.books.splice(bookIndex, 1, newName);
+
+
     // Пиши код выше этой строки
   },
 };
@@ -937,9 +937,9 @@ const bookShelf = {
 const atTheOldToad = {
   // Пиши код ниже этой строки
   potions: [],
- getPotions(){
-   return this.potions
- }
+  getPotions() {
+    return this.potions
+  }
   // Пиши код выше этой строки
 };
 
@@ -952,7 +952,7 @@ const atTheOldToad = {
 const atTheOldToad = {
   // Пиши код ниже этой строки
   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
-  getPotions(){
+  getPotions() {
     this.potions.push()
     return this.potions
   }
@@ -1003,7 +1003,7 @@ const atTheOldToad = {
   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
   updatePotionName(oldName, newName) {
     // Пиши код ниже этой строки
- const potionsIndex = this.potions.indexOf(oldName);
+    const potionsIndex = this.potions.indexOf(oldName);
     this.potions.splice(potionsIndex, 1, newName);
     // Пиши код выше этой строки
   },
@@ -1032,36 +1032,79 @@ const atTheOldToad = {
 
     this.potions.push(potionName);
   },
-  
-  
+
+
   removePotion(potionName) {
-    
-   const { potions } = this;
-    
+
+    const { potions } = this;
+
     for (let i = 0; i < potions.length; i += 1) {
       const potion = potions[i];
-      
+
       if (potionName === potion.name) {
         potions.splice(i, 1);
       }
     }
-    },
+  },
 
- 
+
   updatePotionName(oldName, newName) {
     const { potions } = this;
-    
-    for ( let i = 0; i < potions.length; i += 1) {
-      
-      
+
+    for (let i = 0; i < potions.length; i += 1) {
+
+
       if (oldName === potions[i].name) {
-        
+
         potions[i].name = newName;
-        
+
       }
     }
-        
-        
+
+
   },
   // Пиши код выше этой строки
 };
+
+
+
+
+
+
+// MODUL 4
+
+
+// TASK 1
+
+
+function makePizza() {
+  return 'Ваша пицца готовится, ожидайте.';
+}
+// Пиши код ниже этой строки
+
+const result = (makePizza('Ваша пицца готовится, ожидайте.'));
+const pointer = (makePizza);
+
+
+
+
+
+// TASK 2
+
+
+
+function deliverPizza(pizzaName) {
+  return `Доставляем пиццу ${pizzaName}.`;
+}
+
+function makePizza(pizzaName) {
+  return `Пицца ${pizzaName} готовится, ожидайте...`;
+}
+
+// Пиши код ниже этой строки
+function makeMessage(pizzaName, callback) {
+  
+  callback(makePizza, deliverPizza);
+  
+  return callback(pizzaName);
+}
