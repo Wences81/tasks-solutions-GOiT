@@ -1510,3 +1510,114 @@ builder.padEnd('^');
 console.log(builder.getValue()); // '^.^'
 builder.padBoth('=');
 console.log(builder.getValue()); // '=^.^='
+
+
+
+
+
+
+// TASK 9
+
+
+
+class Car {
+  
+  
+  
+  constructor({ brand, model, price }) {
+    
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+}
+
+
+
+
+
+
+
+// TASK 10
+
+
+
+class Car {
+  constructor({ brand, model, price }) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+  getPrice() {
+    return this.price;
+  }
+  changePrice(newPrice) {
+    this.price = newPrice;
+  }
+}
+
+
+
+
+
+
+
+// TASK 11
+
+
+
+class Car {
+  #brand;
+  constructor({ brand, model, price }) {
+    this.#brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+  getBrand() {
+    return this.#brand;
+  }
+  changeBrand(newBrand) {
+    this.#brand = newBrand;
+  }
+}
+
+
+
+
+
+
+
+// TASK 12
+
+
+
+
+class Storage {
+  #items;
+constructor( items ) {
+  this.#items = items;
+}
+
+getItems() {
+  return this.#items;
+};
+
+addItem (newItem) {
+  this.#items.push(newItem);
+}
+
+removeItem(item) {
+  const itemIndex = this.#items.indexOf(item);
+  this.#items.splice(itemIndex, 1);
+};
+}
+// Пиши код выше этой строки
+const storage = new Storage(["Нанитоиды", "Пролонгер", "Антигравитатор"]);
+console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
+storage.addItem("Дроид");
+console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
+storage.removeItem("Пролонгер");
+console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+
+
+
