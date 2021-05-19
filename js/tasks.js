@@ -1621,3 +1621,169 @@ console.log(storage.getItems()); // ["Нанитоиды", "Антигравит
 
 
 
+
+
+
+
+
+// TASK 13
+
+
+
+
+class StringBuilder {
+  #value;
+constructor( value ) {
+  this.#value = value;
+}
+
+getValue() {
+  return this.#value;
+};
+
+padEnd(str) {
+  this.#value += str;
+};
+
+padStart(str) {
+  this.#value = str + this.#value;
+};
+
+padBoth(str) {
+  this.padStart(str);
+  this.padEnd(str);
+};
+}
+// Пиши код выше этой строки
+const builder = new StringBuilder('.');
+console.log(builder.getValue()); // '.'
+builder.padStart('^');
+console.log(builder.getValue()); // '^.'
+builder.padEnd('^');
+console.log(builder.getValue()); // '^.^'
+builder.padBoth('=');
+console.log(builder.getValue()); // '=^.^='
+
+
+
+
+
+
+
+// TASK 14
+
+
+
+
+class Car {
+  #model;
+  #price;
+  #brand;
+
+  constructor({ brand, model, price }) {
+    this.#brand = brand;
+    this.#model = model;
+    this.#price = price;
+  }
+
+  get brand() {
+    return this.#brand;
+  }
+
+  set brand(newBrand) {
+    this.#brand = newBrand;
+  }
+
+  get model() {
+    return this.model;
+  }
+
+  set model(newModel) {
+    this.model = newModel;
+  }
+
+  get price() {
+    return this.price;
+  }
+
+  set price(newPrice) {
+    this.price = newPrice;
+  }
+}
+
+
+
+
+
+
+
+
+// TASK 15
+
+
+
+
+class Car {
+  // Пиши код ниже этой строки
+  static MAX_PRICE = 50000;
+  #price;
+
+  constructor( {price} ) {
+    this.#price = price;
+  }
+
+  get price() {
+   return this.#price;
+  }
+
+  set price(newPrice) {
+    if (Car.MAX_PRICE < newPrice) {
+      return this.#price;
+      }
+    this.#price = newPrice;
+  }
+  // Пиши код выше этой строки
+}
+
+const audi = new Car({price: 35000});
+console.log(audi.price); // 35000
+
+audi.price = 49000;
+console.log(audi.price); // 49000
+
+audi.price = 51000;
+console.log(audi.price); // 49000
+
+
+
+
+
+
+
+
+// TASK 16
+
+
+
+
+class Car {
+  static #MAX_PRICE = 50000;
+  // Пиши код ниже этой строки
+ static checkPrice(price) {
+   if (price > Car.#MAX_PRICE) {
+     return 'Внимание! Цена превышает допустимую.';
+   }
+   return 'Всё хорошо, цена в порядке.';
+ }
+     
+  // Пиши код выше этой строки
+  constructor({ price }) {
+    this.price = price;
+  }
+}
+
+const audi = new Car({ price: 36000 });
+const bmw = new Car({ price: 64000 });
+
+console.log(Car.checkPrice(audi.price)); // Всё хорошо, цена в порядке.
+console.log(Car.checkPrice(bmw.price)); // Внимание! Цена превышает допустимую.
