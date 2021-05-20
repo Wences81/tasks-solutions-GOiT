@@ -1932,3 +1932,59 @@ mango.blacklist('poly@mail.com');
 console.log(mango.blacklistedEmails); // 'poly@mail.com'
 console.log(mango.isBlacklisted('mango@mail.com')); //  false
 console.log(mango.isBlacklisted('poly@mail.com')); // true
+
+
+
+
+
+
+
+
+
+
+
+// MODUL 6
+
+
+
+// TASK 1
+
+
+
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Пиши код ниже этой строки
+
+  orderedItems.forEach(function(orderedItems, index) {
+   totalPrice += orderedItems;
+  })
+
+  // Пиши код выше этой строки
+ return totalPrice
+}
+
+
+
+
+
+
+
+// TASK 2
+
+
+
+
+function filterArray(numbers, value) {
+    const filteredNumbers = [];
+    // Пиши код ниже этой строки
+  
+    numbers.forEach(function(namber, i) {
+      if (numbers[i] > value) {
+        filteredNumbers.push(numbers[i]);
+      }
+    })
+  
+    // Пиши код выше этой строки
+    return filteredNumbers;
+  }
