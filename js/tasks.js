@@ -1988,3 +1988,122 @@ function filterArray(numbers, value) {
     // Пиши код выше этой строки
     return filteredNumbers;
   }
+
+
+
+
+
+
+  // TASK 3
+
+
+
+
+  function getCommonElements(firstArray, secondArray) {
+    const commonElements = [];
+    // Пиши код ниже этой строки
+  
+    firstArray.forEach(function(  firstArray ) {
+      if (secondArray.includes(firstArray)) {
+        commonElements.push(firstArray);
+      }
+    })
+  
+    return commonElements;
+    // Пиши код выше этой строки
+  }
+
+
+
+
+
+
+  // TASK 4
+
+
+
+
+// Пиши код ниже этой строки
+
+const calculateTotalPrice = (quantity, pricePerItem) => {
+  // Пиши код выше этой строки
+  return quantity * pricePerItem;
+}
+
+
+
+
+// TASK 5
+
+
+
+// Пиши код ниже этой строки
+const calculateTotalPrice = (quantity, pricePerItem) => 
+   quantity * pricePerItem;
+
+// Пиши код выше этой строки
+
+
+
+
+
+// TASK 6
+
+
+
+// Пиши код ниже этой строки
+const calculateTotalPrice = orderedItems=> {
+  let totalPrice = 0;
+
+  orderedItems.forEach((item)=> {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+}
+
+
+
+
+
+
+// TASK 7
+
+
+
+
+// Пиши код ниже этой строки
+const filterArray = (numbers, value)=> {
+    const filteredNumbers = [];
+  
+    numbers.forEach((number)=> {
+      if (number > value) {
+        filteredNumbers.push(number);
+      }
+    });
+  
+    // Пиши код выше этой строки
+    return filteredNumbers;
+}
+  
+
+
+
+// TASK 8
+
+
+
+
+// Пиши код ниже этой строки
+const getCommonElements = (firstArray, secondArray)=> {
+    const commonElements = [];
+  
+    firstArray.forEach((element)=> {
+      if (secondArray.includes(element)) {
+        commonElements.push(element);
+      }
+    });
+  
+    // Пиши код выше этой строки
+    return commonElements;
+  }
