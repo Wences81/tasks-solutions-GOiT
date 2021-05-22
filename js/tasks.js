@@ -2107,3 +2107,434 @@ const getCommonElements = (firstArray, secondArray)=> {
     // Пиши код выше этой строки
     return commonElements;
   }
+
+
+
+
+
+
+
+  // TASK 9
+
+
+
+
+  function changeEven(numbers, value) {
+    // Пиши код ниже этой строки
+  const newArray = [];
+ 
+  numbers.forEach(number => {
+      if (number % 2 === 0) {
+       number += value;
+      }
+     newArray.push(number || number + value)
+    });
+  return newArray
+    // Пиши код выше этой строки
+  }
+
+
+
+
+
+
+
+  // TASK 10
+
+
+
+  const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
+// Пиши код ниже этой строки
+const planetsLengths = planets.map((planet) => planet.length);
+
+
+
+
+
+
+
+// TASK 11
+
+
+
+
+const books = [
+    { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+    { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+    { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+    { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+    { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+  ];
+  // Пиши код ниже этой строки
+  
+const titles = books.map(book => book.title);
+  
+
+
+
+
+
+
+
+// TASK 12
+
+
+
+const books = [
+    {
+      title: 'Последнее королевство',
+      author: 'Бернард Корнуэлл',
+      genres: ['приключения', 'историческое']
+    },
+    {
+      title: 'На берегу спокойных вод',
+      author: 'Роберт Шекли',
+      genres: ['фантастика']
+    },
+    {
+      title: 'Красна как кровь',
+      author: 'Ли Танит',
+      genres: ['ужасы', 'мистика']
+    }
+  ];
+  // Пиши код ниже этой строки
+  
+  const genres = books.flatMap((book)=> book.genres);
+
+
+
+
+
+
+  // TASK 13
+
+
+
+  // Пиши код ниже этой строки
+
+const getUserNames = users=>  {
+  const names = users.map((user)=> user.name);
+  return names;
+}
+  
+
+
+
+
+
+// TASK 14
+
+
+
+// Пиши код ниже этой строки
+const getUserEmails = users => {
+  const emails = users.map((user)=> user.email )
+                           
+return emails
+};
+  
+
+
+
+
+// TASK 15
+
+
+
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// Пиши код ниже этой строки
+
+const evenNumbers = numbers.filter(number=> number % 2 === 0);
+const oddNumbers = numbers.filter(number=> number & 2 !== 0);
+
+
+
+
+
+
+
+// TASK 16
+
+
+
+
+const books = [
+    {
+      title: 'Последнее королевство',
+      author: 'Бернард Корнуэлл',
+      genres: ['приключения', 'историческое']
+    },
+    {
+      title: 'На берегу спокойных вод',
+      author: 'Роберт Шекли',
+      genres: ['фантастика', 'мистика']
+    },
+    {
+      title: 'Красна как кровь',
+      author: 'Ли Танит',
+      genres: ['ужасы', 'мистика', 'приключения']
+    }
+  ];
+  // Пиши код ниже этой строки
+  const allGenres = books.flatMap(book=> book.genres);
+  const uniqueGenres = allGenres.filter(
+    (genr, index, array)=> array.indexOf(genr) === index
+    );
+
+
+
+
+
+
+
+    // TASK 17
+
+
+
+
+    const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
+
+const MIN_RATING = 8;
+const AUTHOR = 'Бернард Корнуэлл';
+// Пиши код ниже этой строки
+
+const topRatedBooks = books.filter((book)=> book.rating >= MIN_RATING);
+const booksByAuthor = books.filter((book)=> book.author === AUTHOR);
+
+
+
+
+
+
+
+
+// TASK 18
+
+
+
+
+// Пиши код ниже этой строки
+const getUsersWithEyeColor = (users, color) => {
+  
+  const names = users.filter(user=> user.eyeColor === color) 
+    
+    return names;  
+               
+};
+
+
+
+
+
+
+
+// TASK 19
+
+
+
+// Пиши код ниже этой строки
+const getUsersWithAge = (users, minAge, maxAge) => {
+ return users.filter(user=> user.age >= minAge && user.age <= maxAge) 
+
+};
+
+
+
+
+
+
+// TASK 20
+
+
+
+
+// Пиши код ниже этой строки
+const getUsersWithFriend = (users, friendName) => {
+   return users.filter(user=> user.friends.includes(friendName)) 
+ 
+  
+};
+
+
+
+
+
+
+// TASK 21
+
+
+
+
+// Пиши код ниже этой строки
+const getFriends = (users) => {
+  const allFriends = users.flatMap(user=> user.friends);
+  const uniqueFriends = allFriends.filter(
+    (friend, index, array)=> array.indexOf(friend) === index);
+  return uniqueFriends;
+};
+
+
+
+
+
+// TASK 22
+
+
+
+// Пиши код ниже этой строки
+const getActiveUsers = (users) => {
+  return users.filter(user=> user.isActive === true) 
+};
+
+
+
+
+
+
+// TASK 24
+
+
+
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+];
+const BOOK_TITLE = 'Сон смешного человека';
+const AUTHOR = 'Роберт Шекли';
+// Пиши код ниже этой строки
+
+const bookWithTitle = books.find((book)=> book.title === BOOK_TITLE);
+const bookByAuthor = books.find((book) => book.author === AUTHOR);
+
+
+
+
+
+// TASK 25
+
+
+
+// Пиши код ниже этой строки
+const getUserWithEmail = (users, email) => {
+  return users.find(user=> user.email === email) 
+};
+
+
+
+
+
+
+// TASK 26
+
+
+
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Пиши код ниже этой строки
+
+const eachElementInFirstIsEven = firstArray.every((value)=> value % 2 === 0);
+const eachElementInFirstIsOdd = firstArray.every((value)=> value % 2 !== 0);
+
+const eachElementInSecondIsEven = secondArray.every((value)=> value % 2 === 0);
+const eachElementInSecondIsOdd = secondArray.every((value)=> value % 2 !== 0);
+
+const eachElementInThirdIsEven = thirdArray.every((value)=> value % 2 === 0);
+const eachElementInThirdIsOdd = thirdArray.every((value)=> value % 2 !== 0);
+
+
+
+
+
+
+
+// TASK 27
+
+
+
+
+// Пиши код ниже этой строки
+const isEveryUserActive = (users) => {
+  return users.every((user)=> user.isActive === true || false)
+};
+
+
+
+
+// TASK 28
+
+
+
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Пиши код ниже этой строки
+
+const anyElementInFirstIsEven = firstArray.some(value=> value % 2 === 0);
+const anyElementInFirstIsOdd = firstArray.some(value=> value % 2 !== 0);
+
+const anyElementInSecondIsEven = secondArray.some(value=> value % 2 === 0);
+const anyElementInSecondIsOdd = secondArray.some(value=> value % 2 !== 0);
+
+const anyElementInThirdIsEven = thirdArray.some(value=> value % 2 === 0);
+const anyElementInThirdIsOdd = thirdArray.some(value=> value % 2 !== 0);
+
+
+
+
+
+
+// TASK 30
+
+
+
+
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244
+};
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// Пиши код ниже этой строки
+
+const totalPlayTime = playtimes.reduce((values, number)=> {
+  return values + number;
+}, 0)
+
+// Пиши код выше этой строки
+const averagePlayTime = totalPlayTime / playtimes.length;
+
+
+
+
+
+
+
+// TASK 31
+
+
+
+
+const players = [
+  { name: 'Манго', playtime: 1270, gamesPlayed: 4 },
+  { name: 'Поли', playtime: 469, gamesPlayed: 2 },
+  { name: 'Аякс', playtime: 690, gamesPlayed: 3 },
+  { name: 'Киви', playtime: 241, gamesPlayed: 1 },
+];
+// Пиши код ниже этой строки
+
+const totalAveragePlaytimePerGame = players.reduce((total, player)=> {
+  return player.playtime / player.gamesPlayed + total;
+},0);
