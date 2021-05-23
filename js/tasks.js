@@ -2538,3 +2538,218 @@ const players = [
 const totalAveragePlaytimePerGame = players.reduce((total, player)=> {
   return player.playtime / player.gamesPlayed + total;
 },0);
+
+
+
+
+
+
+
+// TASK 32
+
+
+
+
+// Пиши код ниже этой строки
+const calculateTotalBalance = users => {
+  return [...users].reduce((total, user)=> {
+     
+   return user.balance + total
+  },0);
+  
+};
+
+
+
+
+
+
+// TASK 33
+
+
+
+
+// Пиши код ниже этой строки
+const getTotalFriendCount = users => {
+  return [...users].reduce((total, user)=> {
+    return user.friends.length + total;
+  },0);
+};
+
+
+
+
+
+
+
+// TASK 34
+
+
+
+
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  'Ли Танит',
+  'Бернард Корнуэлл',
+  'Роберт Шекли',
+  'Федор Достоевский'
+];
+// Пиши код ниже этой строки
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();
+
+
+
+
+
+
+// TASK 35
+
+
+
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Пиши код ниже этой строки
+
+const ascendingReleaseDates = [...releaseDates].sort((a,b)=> a - b);
+
+const descendingReleaseDates = [...releaseDates].sort((a,b)=> b - a);
+
+
+
+
+
+
+// TASK 36
+
+
+
+
+const authors = [
+    'Ли Танит',
+    'Бернард Корнуэлл',
+    'Роберт Шекли',
+    'Федор Достоевский',
+    'Говард Лавкрафт'
+  ];
+  // Пиши код ниже этой строки
+  
+  const authorsInAlphabetOrder = [...authors].sort((a,b)=> a.localeCompare(b));
+  
+  const authorsInReversedOrder = [...authors].sort((a,b)=> b.localeCompare(a));
+
+
+
+
+
+
+
+  // TASK 37
+
+
+
+
+
+  const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
+// Пиши код ниже этой строки
+
+const sortedByAuthorName = [...books].sort((firstBook, secondBook)=> firstBook.author.localeCompare(secondBook.author));
+                                              
+const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook)=> secondBook.author.localeCompare(firstBook.author));
+
+const sortedByAscendingRating = [...books].sort((firstBook, secondBook)=> firstBook.rating - secondBook.rating);
+
+const sortedByDescentingRating = [...books].sort((firstBook, secondBook)=> secondBook.rating - firstBook.rating);
+
+
+
+
+
+
+
+// TASK 38
+
+
+
+// Пиши код ниже этой строки
+const sortByAscendingBalance = users => {
+   return [...users].sort((firstUser, secondUser)=> firstUser.balance - secondUser.balance)
+};
+
+
+
+
+
+
+// TASK 39
+
+
+
+// Пиши код ниже этой строки
+const sortByDescendingFriendCount = users => {
+  return [...users].sort((firstUser, secondUser)=> secondUser.friends.length - firstUser.friends.length) 
+};
+
+
+
+
+
+// TASK 40
+
+
+
+// Пиши код ниже этой строки
+const sortByName = users => {
+  return [...users].sort((firstUser, secondUser)=> firstUser.name.localeCompare(secondUser.name)) 
+};
+
+
+
+
+
+
+// TASK 41
+
+
+
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+  { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 }
+];
+const MIN_BOOK_RATING = 8;
+// Пиши код ниже этой строки
+
+const names = books
+
+.filter((book)=> book.rating > MIN_BOOK_RATING)
+.sort((firstBook, secondBook)=> firstBook.author.localeCompare(secondBook.author))
+.map((book)=> book.author); 
+
+
+
+
+
+// TASK 42
+
+
+
+
+// Пиши код ниже этой строки
+const getNamesSortedByFriendCount = users => {
+  return [...users]
+  .sort((firstUser, secondUser)=> firstUser.friends.length - secondUser.friends.length)
+  .map((user)=> user.name)
+};
