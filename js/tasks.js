@@ -2753,3 +2753,47 @@ const getNamesSortedByFriendCount = users => {
   .sort((firstUser, secondUser)=> firstUser.friends.length - secondUser.friends.length)
   .map((user)=> user.name)
 };
+
+
+
+
+
+
+// TASK 43
+
+
+
+
+// Пиши код ниже этой строки
+const getSortedFriends = users => {
+  return [...users]
+ 
+ 
+  .flatMap((user)=> user.friends)
+  
+   .filter((user, index, array)=> array.indexOf(user) === index)
+  
+   .sort((firstUser, secondUser)=> firstUser.localeCompare(secondUser))
+};
+
+
+
+
+
+
+
+// TASK 44
+
+
+
+
+// Пиши код ниже этой строки
+const getTotalBalanceByGender = (users, gender) => {
+   return [...users]
+  
+  .filter(user=> user.gender === gender)
+  
+  .reduce((total, user)=> { 
+     return user.balance + total
+  },0);
+};
